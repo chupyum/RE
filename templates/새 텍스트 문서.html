@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <style>
+            a{
+            display: block;
+            text-align: center;
+            font-size: 50;
+            }
+            textarea{
+                font-size: 40;
+                height:60;
+             
+            }
+            
+            
+
+        </style>
+        <script>
+           
+        const textareaValue = document.querySelector('textarea').value;
+        console.log(textareaValue);
+
+        </script>
+        <title>
+            개발자의 공간https://media.tenor.com/SnGv5ezAqw8AAAAC/cute-duck.gif
+        </title>
+    </head>
+    <body>
+        
+      
+        <a> 예시</a>
+       <a>
+        <form onsubmit="processinput(event)">
+            <textarea  id="messageInput" placeholder="메시지를 입력하세요"  ></textarea>
+            <button type="submit">보내기</button>
+          </form>
+          <div id="resultContainer"></div>
+        </a>
+
+          <script>
+            function processinput(event) {
+                event.preventDefault();
+
+                const t = document.getElementById('messageInput').value
+                const re = document.getElementById('resultContainer');
+                let result = "";
+                if (t ==='안녕'){
+                    result = '안녕하세요';
+                }
+                if(t ==='1'){
+                   result = "당신은 프로그래머라는 진로를 가지고 있고 더 많은 정보는 이 사이트로 가시면 알 수 있습니다: <a href 'https://keep.naver.com/viewer2/all/6468981045fd9c11916a3c69/all'> 링크</a>";
+
+                }
+
+                
+                const resultElement= document.createElement('div');
+                resultElement.textContent =result;
+                re.appendChild(resultElement);
+                document.getElementById('messageInput').value = '';
+
+            }
+            </script>
+       
+        
+    </body>
+</html>

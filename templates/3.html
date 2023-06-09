@@ -42,6 +42,10 @@
                
 
             }
+            h1{
+                padding:50;
+                text-align:center;
+            }
 
             .nt{
                 
@@ -90,6 +94,10 @@
                 font-size:15;
                 text-decoration: none;
                 margin:0;
+            }
+            .sig{
+                text-align:center;
+                margin-left:-200;
             }
             
 
@@ -154,6 +162,11 @@
         padding-top:10000px;
        
     }
+    img{
+      
+        margin-top:0;
+          margin-left:500;
+    }
         </style>
             <title>0chan</title>
             <script>
@@ -176,7 +189,7 @@
                     <a href="12.html"> 로그아웃</a>
                 </u>
             <div class="nt">
-                <a href="검색.html">pillomile</a>
+                <a href="검색.html">0chan</a>
             </div>
         <nav class="boff">
             <k href="#a"></k>
@@ -210,10 +223,26 @@
                 bo.style.display='none';
             });
         </script>
-
-
-        
-        <i><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbXuLQc%2Fbtsf44ls5M9%2FLDKsKey7VhXE1UZ1Obvrnk%2Fimg.jpg"/></i>
-        <form>
-            <input type="file">
-        </form>
+    <div class="sig">
+        <h1>시그마 연산</h1>
+        <form action="/execute" method="post">
+            <label for="dk">1, 2, 3 중 하나를 선택하세요:</label>
+            <select id="dk" name="dk">
+                <option value="1">sigma(K)</option>
+                <option value="2">sigma(K²)</option>
+                <option value="3">sigma(K³)</option>
+            </select>
+            
+            <br>
+            <label for="b">시작 숫자:</label>
+            <input type="text" id="b" name="b">
+            <br>
+            <label for="c">끝 숫자:</label>
+            <input type="text" id="c" name="c">
+            <br>
+            <input type="submit" value="실행">
+        </div>
+    </form>
+    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fw9eBO%2Fbtsi2Gwsbd3%2FoXgkqtz5iIMQ7Lk0bifKa0%2Fimg.jpg">
+</body>
+</html>
