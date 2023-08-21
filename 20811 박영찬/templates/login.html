@@ -75,8 +75,8 @@
             cursor: pointer;
             outline: none;
             border-top: -10px;
-            width: 49px;
-            height: 47px;
+            width: 51px;
+            height: 51px;
             top: 0px;
             background: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmPbzm%2FbtsgNXslMZ0%2Ft1pmwbrcibJIXVeyKeWOSK%2Fimg.png) 
                 no-repeat;
@@ -91,18 +91,21 @@
                 text-decoration: none;
                 margin:0;
             }
-            
-
- 
-            nav u  a:hover{
-                background-color: rgb(223, 223, 223);
-                color: rgb(56, 56, 56);
-                margin: 0;
+            .snb a:hover{
+                color:rgb(124, 124, 124);
+                font-size: 25;
             }
             .nt a{
                 text-decoration: none;
                 color:white;
                 
+            }
+
+ 
+            nav u a:hover{
+                background-color: rgb(223, 223, 223);
+                color: rgb(56, 56, 56);
+                margin: 0;
             }
             i {
           
@@ -111,6 +114,8 @@
                 font-family: Verdana, sans-serif;
                 font-size: 40px; 
                 font-style: normal;
+                margin-left: -50;
+                padding-top:100;
                 
             }
             d {
@@ -132,14 +137,6 @@
             
 
         }
-        .si{
-            padding-top:50;
-            text-align:center;
-        }
-        .snb a:hover{
-                color:rgb(124, 124, 124);
-                font-size: 25;
-            }
         nav k:hover{
                 background-color: rgb(223, 223, 223);
                 color: rgb(56, 56, 56);
@@ -152,26 +149,7 @@
             margin-right: 300px;
 
         }
-    .new a {
-        text-decoration: none;
-        color:black;
-        padding-top:10000px;
-       
-    }
-        img{
-      
-        margin-top:100;
-          margin-left:100;
-    }
-    pre{
-        font-size:30;
-    }
-    .e a {
-        text-decoration: none;
-        color: black;
-        padding: 400;
-        font-size:30;
-    }
+
         </style>
             <title>0chan</title>
             <script>
@@ -185,16 +163,17 @@
         </head>
     <body>
 
+
         <nav>
             <n> 
             
                 <u>
                    
-                    <a href="18.html">{{session["username"]}}</a>
-                    <a href="log_out.html"> 로그아웃</a>
+                    <a href="login.html">로그인</a>
+
                 </u>
             <div class="nt">
-                <a href="검색.html">0chan</a>
+                <a href="index.html">0chan</a>
             </div>
         <nav class="boff">
             <k href="#a"></k>
@@ -204,10 +183,10 @@
         </nav> 
         <div class="snb">
             <ul>  
-                <li><a href="logined.html">Home</a></li>
-                <li><a href="poem.html">poem</a></li>
-                <li><a href="sigma.html">sigma</a></li>
-                <li><a href="modren.html">modren </a></li> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="no_move.html">poem</a></li>
+                <li><a href="no_move.html">sigma</a></li>
+                <li><a href="no_move.html">modren</a></li> 
             </ul>
             <button class="but">
                 <a href="#a"></a>
@@ -228,16 +207,72 @@
                 bo.style.display='none';
             });
         </script>
-    <div class="si">
-        <h1>Execution Result</h1>
+<style>
 
-        <pre>{{ result }}</pre>
-        <button class='e'>
-            <a href='rl.html'> 설명 </a>
-        </button>
-        
-        <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FwUGHJ%2Fbtsi2NI18iP%2FACe2bjzMoej7DzR8badbtK%2Fimg.jpg">
-        
+form{
+    margin: 0 auto;
+
+    max-width: 492px;
+    min-width: 360px;
+    padding-top:120px;
+}
+input{
+    height:68px;
+    width:460px;
+    font-size:20px;
+    padding-left:10px;
+
+}
+.title{
+    
+    margin: auto;
+    margin-bottom:50;
+    font-size:60px;
+        max-width: 202px;
+}
+.login{
+    margin-top:40px;
+    height:60px;
+    width:460px;
+    background-color:black;
+    color:white;
+    font-weight:bold;
+    font-size:20px;
+
+}
+.join{
+    margin-top:100px;
+    font-size:14px;
+    color:gray;
+    text-decoration:none;
+    
+}
+.op{
+    padding-top:10px;
+}
+.op a{
+    padding-right:20px;
+
+}
+.error{
+    background-color:red;
+    color:white;
+    width:90px;
+}
+
+</style>
+ 
+<form method="POST" action="/login.html">
+    <h1 class=title>login</h1>
+        {% if error_message %}
+        <p class="error">{{ error_message }}</p>
+        {% endif %}
+    <input type="text" name="username" placeholder="Username" required><br>
+    <input type="password" name="password" placeholder="Password" required><br>
+    <button class=login>로그인</button><br>
+    <div class=op>
+        <a class=join href="join.html">회원가입</a>
+        <a class=join href="join">뭘봐</a>
+        <a class=join href="join">뭐없어</a>
     </div>
-</body>
-</html>
+</form>

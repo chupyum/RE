@@ -20,4 +20,4 @@ class signup(FlaskForm):
     email = StringField('이메일',validators=[DataRequired(),Email()])
     password = PasswordField('비밀번호')
     checking = PasswordField('비밀 번호 확인')
-    submit
+    submit = SubmitField('Sign Up')

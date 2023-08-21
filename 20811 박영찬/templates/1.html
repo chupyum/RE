@@ -42,6 +42,13 @@
                
 
             }
+            p
+            {
+
+                font-size:30;
+                padding-top:40;
+                padding-left: 20;
+            }
             .snb a:hover{
                 color:rgb(124, 124, 124);
                 font-size: 25;
@@ -144,19 +151,56 @@
                 margin: 0;
         }
         o a{
-            float: right;
+            float: left;
             padding-top:-1000px;
             margin-top: -44px;
-            margin-right:100;
             text-decoration: none;
             color:black;
 
         }
-        .본문 pre{
-            display: block;
-            font-size:50px;
+         pre{
+            display: flex;
+            font-size:30px;
             text-align: center;
-            margin-right: 0;
+            padding-top:0px;
+        }
+
+        .r a{
+            display: block;
+            padding-top:0;
+            font-size:40;
+            padding-left: 30px;
+            
+        }
+        .note {
+            margin-left:auto;
+            display: block;
+            float: right;
+            position: fixed;
+            padding-right:10px;
+            margin-top: 50px;
+            width: 250;
+            right:10;
+            height: 1000;
+            background-color: rgb(192, 192, 192);
+        }
+        .note a{
+            float: left;
+            font-size:40
+        }
+        .bar{
+            background-color: rgb(192, 192, 192);
+            height:5px;
+            margin-top: 120;
+            width: 210;
+        }
+        .barr{
+            height:100;
+            width: 2000;
+        }
+        .empty{
+            width: 100;
+            height: 1;
         }
         </style>
             <title>0chan</title>
@@ -177,11 +221,11 @@
             
                 <u>
                    
-                    <a href="18.html">20811 박영찬</a>
-                    <a href="12.html"> 로그아웃</a>
+                    <a href="18.html">{{session["username"]}}</a>
+                    <a href="log_out.html"> 로그아웃</a>
                 </u>
             <div class="nt">
-                <a href="index.html">0chan</a>
+                <a href="logined.html">0chan</a>
             </div>
         <nav class="boff">
             <k href="#a"></k>
@@ -191,14 +235,32 @@
         </nav> 
         <div class="snb">
             <ul>  
-                <li><a href="index.html">Home</a></li>
-                <li><a href="1.html">poem</a></li>
-                <li><a href="3.html">sigma</a></li>
-                <li><a href="13.html">modren</a></li> 
+                <li><a href="logined.html">Home</a></li>
+                <li><a href="poem.html">poem</a></li>
+                <li><a href="sigma.html">sigma</a></li>
+                <li><a href="modren.html">modren</a></li> 
             </ul>
             <button class="but">
                 <a href="#a"></a>
             </button>
+        </div>
+        <div class="note">
+            <a>commercial</a>
+            <a>adj.상업적인 </a>
+            <div class="bar"></div>
+            <a> launch</a>
+            <a> v.진출하다</a>
+            <div class="bar"></div>
+            <a>assistant</a>
+            <a>n.도우미</a>
+            <div class="bar"></div>
+            <a>perhaps</a>
+            <a>adv.아마도</a>
+            <div class="bar"></div>
+            <a>rival</a>
+            <a>v.경쟁하다</a>
+            <div class="bar"></div>
+            
         </div>
         
         <script>
@@ -215,69 +277,29 @@
                 bo.style.display='none';
             });
         </script>
-
         <o>
-            <d>21년도 고3 9월 모의고사 37번</d>
-            <a>
-                <button onclick="speak('고장난 음성 파일 입니다.,,,지지직....')">Speak</button>
-            </a>
-
-           
-            <i><img src=""/></i>
-            <div class="본문">
-        <a href="r.html">
-            <pre class="1" href="r.html">
-                Recently, a number of commercial ventures have been
-                launched that offer social robots as personal home
-                assistants, perhaps eventually to rival existing smart-home
-                assistants.
-            </pre>
-        </a>
-        <a href="t.html">
-            <pre class="1" href="t.html">
-                
-                (A) They might be motorized and can track the user around
-                the room, giving the impression of being aware of the
-                people in the environment. Although personal robotic
-                assistants provide services similar to those of smart-home
-                assistants, their social presence offers an opportunity that
-                is unique to social robots.
-            </pre>
-        </a>
-        <a href="p.html">
-            <pre class="1" href="t.html">
-                (B) Personal robotic assistants are devices that have no
-                a physical manipulation or locomotion capabilities. Instead,
-                they have a distinct social presence and have visual
-                features suggestive of their ability to interact socially, such
-                as eyes, ears, or a mouth.
-            </pre>
-        </a>
-            <a href="f.html">
-            <pre class="1" href="t.html">
-                (C) For instance, in addition to playing music, a social personal
-                assistant robot would express its engagement with the
-                music so that users would feel like they are listening to the
-                music together with the robot. These robots can be used as
-                surveillance devices, act as communicative intermediates,
-                engage in richer games, tell stories, or be used to provide
-                encouragement or incentives.                         
-            </pre>
-            <pre>① (A) － (C) － (B) ② (B) － (A) － (C)
- ③ (B) － (C) － (A) ④ (C) － (A) － (B) 
-⑤ (C) － (B) － (A)
-            </pre>
-        </a>
-            </div>
-        </o>
-
-       
-
-        
+            <o>
             
+        <div class="r">
+            <div CLASS="barr"></div>
+            <pre>                                                          현재 완료</pre>
+        <a>
+            Recently, [a number of commercial ventures]  have been
+            launched 
+        </a>
+        <p> 관계대명사</p>
+        <a>(that offer social robots/ as personal home
+            assistants,) perhaps
+        </a> 
+        <div CLASS="barr"></div>
+        <a>eventually to rival existing smart-home
+            assistants.
+        </a>
+        <div CLASS="barr"></div>
+        <div CLASS="barr"></div>
+        <div CLASS="barr"></div>
         
-            
-    
+        <pre>최근에, 소셜 로봇을 개인용 가정 도우미로 제공하는 많은 상업적인 벤처 기업들이 
+            진출해 왔는데, 아마도 결국 기존의 스마트홈 도우미와 경쟁하게 될 것이다.</pre>
         
-    </body>
-</html>
+        </div>

@@ -42,6 +42,10 @@
                
 
             }
+            h1{
+                padding:50;
+                text-align:center;
+            }
 
             .nt{
                 
@@ -91,6 +95,10 @@
                 text-decoration: none;
                 margin:0;
             }
+            .sig{
+                text-align:center;
+                margin-left:-200;
+            }
             
 
  
@@ -132,10 +140,6 @@
             
 
         }
-        .si{
-            padding-top:50;
-            text-align:center;
-        }
         .snb a:hover{
                 color:rgb(124, 124, 124);
                 font-size: 25;
@@ -158,19 +162,10 @@
         padding-top:10000px;
        
     }
-        img{
+    img{
       
-        margin-top:100;
-          margin-left:100;
-    }
-    pre{
-        font-size:30;
-    }
-    .e a {
-        text-decoration: none;
-        color: black;
-        padding: 400;
-        font-size:30;
+        margin-top:0;
+          margin-left:500;
     }
         </style>
             <title>0chan</title>
@@ -194,7 +189,7 @@
                     <a href="log_out.html"> 로그아웃</a>
                 </u>
             <div class="nt">
-                <a href="검색.html">0chan</a>
+                <a href="logined.html">0chan</a>
             </div>
         <nav class="boff">
             <k href="#a"></k>
@@ -228,16 +223,26 @@
                 bo.style.display='none';
             });
         </script>
-    <div class="si">
-        <h1>Execution Result</h1>
-
-        <pre>{{ result }}</pre>
-        <button class='e'>
-            <a href='rl.html'> 설명 </a>
-        </button>
-        
-        <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FwUGHJ%2Fbtsi2NI18iP%2FACe2bjzMoej7DzR8badbtK%2Fimg.jpg">
-        
-    </div>
+    <div class="sig">
+        <h1>시그마 연산</h1>
+        <form action="/execute" method="post">
+            <label for="dk">화살표를 클릭하여 설정을 변경하세요:</label>
+            <select id="dk" name="dk">
+                <option value="1">sigma(K)</option>
+                <option value="2">sigma(K²)</option>
+                <option value="3">sigma(K³)</option>
+            </select>
+            
+            <br>
+            <label for="b">시작 숫자:</label>
+            <input type="text" id="b" name="b">
+            <br>
+            <label for="c">끝 숫자:</label>
+            <input type="text" id="c" name="c">
+            <br>
+            <input type="submit" value="실행">
+        </div>
+    </form>
+    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fw9eBO%2Fbtsi2Gwsbd3%2FoXgkqtz5iIMQ7Lk0bifKa0%2Fimg.jpg">
 </body>
 </html>
